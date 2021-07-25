@@ -250,8 +250,8 @@ def main():
 
         time_stats(df, month, day)
         station_stats(df)
-        trip_duration_stats(df)
         user_stats(df, city)
+        trip_duration_stats(df)
         
         #The following variables are used to show the raw data to the user. 
         show_raw_data = ''
