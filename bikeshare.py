@@ -24,12 +24,12 @@ def get_filters():
         city = input('For which city do you want to analyze the data?\n'
                     'Please type in Chicago, New York City or Washington: ')
         if city.lower() == 'chicago':
-            print('\nNice, you have choosen Chicago!\n')
+            print('\nWoohoo, you have choosen Chicago!\n')
         elif city.lower() == 'new york city' or city.lower() == 'nyc' or city.lower() == 'new york':
-            print('\nNice, you have choosen New York City!\n')
+            print('\nNew York City is your choice!\n')
             city = "new york city"
         elif city.lower() == 'washington':
-            print('\nNice, you have choosen Washington!\n')
+            print('\nNice, you have choosen the Capitol city Washington!\n')
         else:
             print('\nWrong input. Please choose between "Chicago", "New York City" and "Washington".\n')
     city = city.lower() #Saves the input in lower cases
