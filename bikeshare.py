@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-def get_filters():
+def get_user_filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -24,12 +24,12 @@ def get_filters():
         city = input('For which city do you want to analyze the data?\n'
                     'Please type in Chicago, New York City or Washington: ')
         if city.lower() == 'chicago':
-            print('\nNice, you have choosen Chicago!\n')
+            print('\nWoohoo, you have choosen Chicago!\n')
         elif city.lower() == 'new york city' or city.lower() == 'nyc' or city.lower() == 'new york':
-            print('\nNice, you have choosen New York City!\n')
+            print('\nNew York City is your choice!\n')
             city = "new york city"
         elif city.lower() == 'washington':
-            print('\nNice, you have choosen Washington!\n')
+            print('\nNice, you have choosen the Capitol city Washington!\n')
         else:
             print('\nWrong input. Please choose between "Chicago", "New York City" and "Washington".\n')
     city = city.lower() #Saves the input in lower cases
@@ -245,13 +245,13 @@ def user_stats(df, city):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_user_filters()
         df = load_data(city, month, day)
 
         time_stats(df, month, day)
         station_stats(df)
-        trip_duration_stats(df)
         user_stats(df, city)
+        trip_duration_stats(df)
         
         #The following variables are used to show the raw data to the user. 
         show_raw_data = ''
